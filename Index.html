@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Nanny Experts | Caring & Professional</title>
+    
+    <!-- Tailwind CSS for sleek, modern, and easily maintainable styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration for Warm, Baby-Friendly Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FFF5F5', // Soft warm white/pink
+                            peach: '#FBD38D', // Warm friendly peach
+                            rose: '#F687B3',  // Soft caring pink
+                            blue: '#90CDF4',  // Trustworthy baby blue
+                            text: '#2D3748'   // Soft dark gray for readability
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Font 'Nunito' for a rounded, approachable, and warm feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-brand-light text-brand-text font-sans antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="font-extrabold text-2xl text-brand-rose">HK Nanny Care</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#discover" class="text-gray-600 hover:text-brand-rose font-semibold transition">Discover Us</a>
+                    <a href="#parents" class="text-gray-600 hover:text-brand-rose font-semibold transition">For Parents</a>
+                    <a href="#nannies" class="text-gray-600 hover:text-brand-rose font-semibold transition">For Nannies</a>
+                    <a href="#references" class="text-gray-600 hover:text-brand-rose font-semibold transition">References</a>
+                    <a href="#schedule" class="bg-brand-rose text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-pink-500 transition">Schedule a Call</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 px-4 md:pt-40 md:pb-28 text-center bg-gradient-to-b from-white to-brand-light">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-brand-text leading-tight mb-6">
+                Experienced, Caring Hands for Your <span class="text-brand-rose">Little Ones.</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                Hong Kong's most trusted network of qualified, background-checked nannies. We match your family's unique needs with the perfect caregiver.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#parents" class="bg-brand-blue text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-blue-400 transition">Find a Nanny</a>
+                <a href="#nannies" class="bg-white border-2 border-brand-peach text-brand-text px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-brand-peach hover:text-white transition">Apply as a Nanny</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCOVER US -->
+    <section id="discover" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-brand-rose">Discover Us</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Founded by parents, for parents. We understand the fast-paced life in Hong Kong and the vital need for absolute peace of mind when leaving your children at home. Every nanny in our network is thoroughly vetted, experienced, and brings a warm, educational, and loving approach to childcare. 
+            </p>
+        </div>
+    </section>
+
+    <!-- FOR PARENTS: REQUEST FORM -->
+    <section id="parents" class="py-20 bg-brand-blue bg-opacity-10">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-2 text-center text-brand-blue">Find Your Perfect Nanny</h2>
+                <p class="text-center text-gray-500 mb-8">Tell us about your family's needs, and we'll handle the rest.</p>
+                
+                <!-- Replace ACTION_URL with Formspree Endpoint -->
+                <form action="ACTION_URL" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Parent's Name</label>
+                            <input type="text" name="parentName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-gray-50">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Number of Children & Ages</label>
+                            <input type="text" name="childrenDetails" placeholder="e.g. 2 kids, ages 1 and 4" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Language(s)</label>
+                            <input type="text" name="languages" placeholder="e.g. English, Cantonese, Mandarin" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-gray-50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Specific Requirements (Qualifications, hours, etc.)</label>
+                        <textarea name="requirements" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-gray-50"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-blue text-white font-bold py-4 rounded-xl hover:bg-blue-400 transition shadow-lg">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR NANNIES: APPLICATION FORM -->
+    <section id="nannies" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-peach bg-opacity-20 rounded-3xl shadow-lg p-8 md:p-12 border border-brand-peach border-opacity-50">
+                <h2 class="text-3xl font-bold mb-2 text-center text-orange-400">Join Our Caring Team</h2>
+                <p class="text-center text-gray-600 mb-8">We are always looking for passionate, experienced childcare professionals.</p>
+                
+                <!-- Note: enctype="multipart/form-data" is required for file uploads -->
+                <form action="ACTION_URL" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                            <input type="text" name="nannyName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-peach bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" name="nannyEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-peach bg-white">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Background Check Status</label>
+                        <select name="backgroundCheck" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-peach bg-white text-gray-600">
+                            <option value="cleared">I have a clean criminal record / SCRC cleared</option>
+                            <option value="in_progress">Currently in progress</option>
+                            <option value="need_help">I need assistance obtaining one</option>
+                        </select>
+                        <p class="text-xs text-gray-500 mt-2">* Note: All our nannies must undergo a strict background check before placement.</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Upload CV (PDF only)</label>
+                        <!-- In a real app, this input type="file" will attach the doc to the form payload -->
+                        <input type="file" name="cv" accept=".pdf" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-peach bg-white">
+                    </div>
+
+                    <button type="submit" class="w-full bg-orange-400 text-white font-bold py-4 rounded-xl hover:bg-orange-300 transition shadow-lg">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR REFERENCES -->
+    <section id="references" class="py-20 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center text-brand-text">What Hong Kong Parents Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <div class="text-brand-rose mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Finding a nanny who spoke both French and Mandarin was tough. This service found us 'Auntie Mei' in just three days. She is absolute magic with our toddler."</p>
+                    <p class="font-bold text-gray-800">- Sarah T., Mid-Levels</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <div class="text-brand-rose mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"The background checks and vetting gave us immediate peace of mind. Highly professional and warm team."</p>
+                    <p class="font-bold text-gray-800">- David L., Repulse Bay</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <div class="text-brand-rose mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Our nanny is basically part of the family now. I can't recommend their matchmaking process enough!"</p>
+                    <p class="font-bold text-gray-800">- Chloe M., Happy Valley</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & SCHEDULE A CALL -->
+    <footer id="schedule" class="bg-brand-text py-16 text-center text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-brand-peach">Let's Discuss Your Needs</h2>
+            <p class="mb-8 text-gray-300">Not sure what you're looking for yet? Schedule a free 15-minute consultation with our founders.</p>
+            <a href="mailto:contact@hknannycare.com" class="inline-block bg-brand-rose text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-pink-500 transition">Email Us to Schedule a Call</a>
+            
+            <div class="mt-16 pt-8 border-t border-gray-700 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 HK Nanny Care. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
